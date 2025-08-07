@@ -9,9 +9,8 @@ module Fog
       # @deprecated The connection name was wrong and confusing since it refered to the service
       # @param [Fog::Service] service An instance of a Fog service this collection is for
       #
-      def connection=(service)
+      def connection=(_service)
         Fog::Logger.deprecation("#connection= is deprecated, pass :service in at creation [light_black](#{caller.first})[/]")
-        @service = service
       end
 
       # Returns the Service the collection is part of
